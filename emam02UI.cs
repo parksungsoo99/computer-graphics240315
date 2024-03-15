@@ -27,14 +27,15 @@ public class emam02UI : MonoBehaviour
                 LineRenderer lineRenderer = lineObj.AddComponent<LineRenderer>();
 
                 int pointCount = 2;
-                Vector3[] points = new Vector3[2];
+                Vector3[] points = new Vector3[pointCount];
 
-                points[0] = new Vector3(0,0,0);
+                points[0] = new Vector3(5,2,0);
                 points [1] = new Vector3(5,0,0);
-
+                
                 lineRenderer.positionCount = pointCount;
                 lineRenderer.SetPositions(points);
-                lineRenderer.startWidth = 0.05f;
+                lineRenderer.startWidth = 0.01f;
+                lineRenderer.endWidth = 3f;
 
                 lineRenderer.material = new Material(Shader.Find("Unlit/Color"));
                 lineRenderer.material.color = Color.red;
